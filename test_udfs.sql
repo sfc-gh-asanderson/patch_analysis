@@ -7,7 +7,7 @@ FROM TABLE(compete_from_opportunities('0013r00002dOVsBAAW'));
 SELECT *
 FROM TABLE(compete_from_opportunities('0010Z00002D47bLQAR'));
 
--- 
+-- Kipu Health
 SELECT *
 FROM TABLE(compete_from_opportunities('0010Z00001wlQeBQAU'));
 
