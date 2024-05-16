@@ -54,5 +54,5 @@ SELECT *
 FROM TABLE(compete_by_account('0013100001rtRPvAAM'));
 
 -- Maersk
-SELECT account_id, competition
+SELECT *
 FROM TABLE(compete_by_account('0010Z000024XBLUQA4'));
