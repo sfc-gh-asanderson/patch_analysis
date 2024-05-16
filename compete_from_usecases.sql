@@ -46,6 +46,8 @@ You will respond with your explanation labelled "explanation", a csv list of com
 
 "SF" refers to Snowflake. Do not include Snowflake as a competitor.  
 
+Do not hallucinate, if a competitor is mentioned but it is not clearly competing then do not return it. 
+
 ####
 Here are some examples:
 
@@ -76,6 +78,8 @@ FROM (SELECT listagg('Use Case ID: ' || u.use_case_id || '\n' ||
 'Description: ' || coalesce(u.use_case_description, '')), '\n\n') as use_cases
 FROM SALES.SALES_ENGINEERING.USECASE u
 WHERE u.new_stage not in ('0 - Not in Pursuit')
-and u.account_id = account_id) 
+--AND LENGTH(trim(u.use_case_id || u.ds || u.new_stage || coalesce(u.use_case_name, '') || coalesce(u.use_case_description, ''), '\n\n')) > 5
+and u.account_id = account_id)
+WHERE LENGTH(use_cases) > 5
 )
 $$;
