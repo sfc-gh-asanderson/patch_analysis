@@ -13,11 +13,11 @@ FROM TABLE(compete_from_opportunities('0010Z00001wlQeBQAU'));
 
 -- TASKS
 
--- Test with JLR
+-- JLR
 SELECT *
 FROM TABLE(compete_from_tasks('0010Z00001tHhZkQAK'));
 
--- Test with Tesco Bank
+-- Tesco Bank
 SELECT *
 FROM TABLE(compete_from_tasks('0013r00002dOVsBAAW'));
 
@@ -37,22 +37,22 @@ FROM TABLE(compete_from_use_cases('0013r00002dOVsBAAW'));
 
 -- ACCOUNT
 
--- Test with JLR
+-- JLR
 SELECT *
 FROM TABLE(compete_by_account('0010Z00001tHhZkQAK'));
 
--- Test with Tesco Bank
+-- Tesco Bank
 SELECT *
 FROM TABLE(compete_by_account('0013r00002dOVsBAAW'));
 
--- Test with Natwest
+-- Natwest
 SELECT *
 FROM TABLE(compete_by_account('0010Z00002D47bLQAR'));
 
--- Test with Sportsdirect
+-- Sportsdirect
 SELECT *
 FROM TABLE(compete_by_account('0013100001rtRPvAAM'));
 
--- Test with Maersk
+-- Maersk
 SELECT account_id, competition
 FROM TABLE(compete_by_account('0010Z000024XBLUQA4'));
