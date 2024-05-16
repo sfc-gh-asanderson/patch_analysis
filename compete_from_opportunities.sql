@@ -1,4 +1,3 @@
-// Add in next_steps_c into call
 CREATE OR REPLACE FUNCTION compete_from_opportunities(account_id VARCHAR)
 RETURNS TABLE (
     account_id VARCHAR,
