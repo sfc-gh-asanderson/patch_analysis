@@ -22,13 +22,17 @@ SELECT *
 FROM TABLE(compete_from_tasks('0013r00002dOVsBAAW'));
 
 -- USE CASES
--- 
-SELECT llm_competition, llm_explanation, use_cases
+-- JLR
+SELECT *
 FROM TABLE(compete_from_use_cases('0010Z00001tHhZkQAK'));
 
--- Test
-SELECT llm_competition, llm_explanation, use_cases
+-- Kipu Health
+SELECT *
 FROM TABLE(compete_from_use_cases('0010Z00001wlQeBQAU'));
+
+-- Tesco Bank
+SELECT *
+FROM TABLE(compete_from_use_cases('0013r00002dOVsBAAW'));
 
 
 -- ACCOUNT
