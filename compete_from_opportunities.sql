@@ -58,6 +58,8 @@ You will respond with your explanation labelled "explanation", a csv list of com
 
 "SF" refers to Snowflake. Terraform is not the same as Teradata. Teradata and SAS are 2 different companies, Teradata is a direct competitor, SAS is not. Do not include Snowflake as a competitor. 
 
+Do not hallucinate, if a competitor is mentioned but it is not clearly competing then do not return it. 
+
 ####
 Here are some examples:
 
