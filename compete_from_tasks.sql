@@ -17,7 +17,7 @@ try_parse_json(llm_competition):explanation::varchar llm_explanation,
 try_parse_json(llm_competition):sentiment::varchar llm_sentiment 
 FROM (
 SELECT t.account_id, t.id as task_id, t.created_date,  
-trim(coalesce(t.before_state_c, '') || ' ' || coalesce(t.pain_points_c, '')) as notes, 
+trim('Meeting Notes: ' || coalesce(t.before_state_c, '') || '\n\n' || coalesce(t.pain_points_c, '')) as notes, 
 SNOWFLAKE.CORTEX.COMPLETE(
     'mistral-large',
         CONCAT('You are an intelligent classification bot. You work for Snowflake Computing a data analytics company. Your task is to assess salesperson meeting notes and categorize which competitor we may be up against after <<<>>> into one of the following predefined list of competitors:
@@ -78,7 +78,7 @@ Competitor: Databricks
 ###
 
 <<<',  
-     trim(coalesce(t.before_state_c, '') || ' ' || coalesce(t.pain_points_c, ''))
+     trim('Meeting Notes: ' || coalesce(t.before_state_c, '') || '\n\n' || coalesce(t.pain_points_c, ''))
     , '>>>'
         )
 ) llm_competition
