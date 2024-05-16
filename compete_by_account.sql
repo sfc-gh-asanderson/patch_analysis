@@ -45,7 +45,7 @@ Do not provide any explanations or notes. Rank the list by which you think are m
 
 Some of the human classifications have additional comments in parentheses, ignore these.
 
-Do not hallucinate, if there is no references to competitors from the list, return "Unknown".
+Do not hallucinate, if there is no references to competitors from the list, return "Unknown". Be sure not to duplicate competitors, just list each one once. 
 
 ####
 Here are some examples:
